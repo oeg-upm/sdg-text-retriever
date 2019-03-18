@@ -5,94 +5,59 @@
  */
 package com.upm.dto;
 
+import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 /**
  *
- * @author Djbosh
+ * @author Alberto Sánchez Ruiz
  */
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+    "items",
+    "meta",
+    "time-elapsed"
+})
 public class ProjectDTO {
-    private Integer id;
-    private String name;
-    private String shortDescription;
-    private String description;
-    private String costDescription;
-    private String city;
-    private String country;
-    private Integer idUser;
 
-    public ProjectDTO(Integer id, String name, String shortDescription, String description, String costDescription, String city, String country, Integer idUser) {
-        this.id = id;
-        this.name = name;
-        this.shortDescription = shortDescription;
-        this.description = description;
-        this.costDescription = costDescription;
-        this.city = city;
-        this.country = country;
-        this.idUser = idUser;
+    @JsonProperty("items")
+    private List<Item> items = null;
+    @JsonProperty("meta")
+    private Meta meta;
+    @JsonProperty("time-elapsed")
+    private Double timeElapsed;
+
+    @JsonProperty("items")
+    public List<Item> getItems() {
+        return items;
     }
 
-    public Integer getId() {
-        return id;
+    @JsonProperty("items")
+    public void setItems(List<Item> items) {
+        this.items = items;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    @JsonProperty("meta")
+    public Meta getMeta() {
+        return meta;
     }
 
-    public String getName() {
-        return name;
+    @JsonProperty("meta")
+    public void setMeta(Meta meta) {
+        this.meta = meta;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @JsonProperty("time-elapsed")
+    public Double getTimeElapsed() {
+        return timeElapsed;
     }
 
-    public String getShortDescription() {
-        return shortDescription;
+    @JsonProperty("time-elapsed")
+    public void setTimeElapsed(Double timeElapsed) {
+        this.timeElapsed = timeElapsed;
     }
 
-    public void setShortDescription(String shortDescription) {
-        this.shortDescription = shortDescription;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getCostDescription() {
-        return costDescription;
-    }
-
-    public void setCostDescription(String costDescription) {
-        this.costDescription = costDescription;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public Integer getIdUser() {
-        return idUser;
-    }
-
-    public void setIdUser(Integer idUser) {
-        this.idUser = idUser;
-    }
-    
-    
 }
