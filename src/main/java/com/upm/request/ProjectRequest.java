@@ -5,25 +5,27 @@
  */
 package com.upm.request;
 
-import javax.annotation.PostConstruct;
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.MediaType;
+import com.upm.dto.ProjectFullDTO;
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.http.HttpHeaders;
+import org.springframework.web.client.RestTemplate;
 
 /**
  *
- * @author Djbosh
+ * @author Alberto Sánchez Ruiz
  */
 
 public class ProjectRequest {
-    private Client client;
-    private WebTarget target;
     
-    @PostConstruct
-    public void init(){
-        client = ClientBuilder.newClient();
-        WebTarget target = client.target("https://api.goteo.org/v1/projects/");
+    public void getProjectsFromGoteo(){
+        RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", "Basic YWxiZXJ0c3I6MWMwOTk4NjE0MTIxN2JjNzdjNmFiY2ExNjk0ZGIyM2Y=");
+        List<ProjectFullDTO> projectList = new ArrayList<>();
+        for(int i=0; i<5; i++){
+            ProjectFullDTO project = restTemplate.getForObject("https://api.goteo.org/v1/projects/",ProjectFullDTO.class);
+        }
     }
 }
     
