@@ -5,7 +5,9 @@
  */
 package com.upm.main;
 
+import com.upm.dto.ProjectDTO;
 import com.upm.dto.ProjectFullDTO;
+import com.upm.parser.ScraperWeb;
 import com.upm.request.ProjectRequest;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +20,15 @@ import java.util.List;
 public class Main {
     
     public static void main (String [] args){
-        List<ProjectFullDTO> listaPrueba = new ArrayList<>();
+        /*
+        List<ProjectFullDTO> response;
         ProjectRequest request = new ProjectRequest();
-        listaPrueba = request.getProjectsFromGoteo();
+        response = request.getProjectsFromGoteo("26");
+        */
+        
+        String url = "https://www.un.org/sustainabledevelopment/es/climate-change-2/";
+        ScraperWeb sw = new ScraperWeb();
+        String res = sw.scrapWebONU13(url);
+        System.out.println(res);
     }
 }
