@@ -7,6 +7,7 @@ package com.upm.main;
 
 import com.upm.dto.ProjectDTO;
 import com.upm.dto.ProjectFullDTO;
+import com.upm.parser.PdfParser;
 import com.upm.parser.ScraperWeb;
 import com.upm.request.ProjectRequest;
 import java.util.ArrayList;
@@ -26,9 +27,16 @@ public class Main {
         response = request.getProjectsFromGoteo("26");
         */
         
+        /*
         String url = "https://www.un.org/sustainabledevelopment/es/climate-change-2/";
         ScraperWeb sw = new ScraperWeb();
         String res = sw.scrapWebONU13(url);
+        System.out.println(res);
+        */
+        
+        String path = "C:\\Users\\Djbosh\\Documents\\ODS\\Agua.pdf";
+        PdfParser parser = new PdfParser();
+        String res = parser.getTextFromPDF(path);
         System.out.println(res);
     }
 }
