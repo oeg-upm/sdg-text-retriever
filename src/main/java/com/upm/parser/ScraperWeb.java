@@ -5,6 +5,7 @@
  */
 package com.upm.parser;
 
+import com.upm.db.Database;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -35,6 +36,8 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(1, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -60,6 +63,8 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(2, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -85,6 +90,8 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(3, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -110,6 +117,8 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(4, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -135,6 +144,8 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(5, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -160,6 +171,8 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(6, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -185,6 +198,8 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(7, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -210,6 +225,8 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(8, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -235,6 +252,8 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(9, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -260,6 +279,8 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(10, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -285,12 +306,14 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(11, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return res;
     }
-    
+
     public String scrapWebONU12(String url) {
         String res = "";
         try {
@@ -310,12 +333,14 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(12, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return res;
     }
-    
+
     public String scrapWebONU13(String url) {
         String res = "";
         try {
@@ -330,7 +355,7 @@ public class ScraperWeb {
                 res += e.select("li").text();
                 res += " ";
             }
-            for (Element e: elementsUL.select("ul")){
+            for (Element e : elementsUL.select("ul")) {
                 res += e.select("li").text();
                 res += " ";
             }
@@ -339,12 +364,14 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(13, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return res;
     }
-    
+
     public String scrapWebONU14(String url) {
         String res = "";
         try {
@@ -364,12 +391,14 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(14, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return res;
     }
-    
+
     public String scrapWebONU15(String url) {
         String res = "";
         try {
@@ -389,12 +418,14 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(15, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return res;
     }
-    
+
     public String scrapWebONU16(String url) {
         String res = "";
         try {
@@ -414,12 +445,14 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(16, res);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return res;
     }
-    
+
     public String scrapWebONU17(String url) {
         String res = "";
         try {
@@ -439,6 +472,8 @@ public class ScraperWeb {
                 res += e.text();
                 res += " ";
             }
+            Database db = new Database();
+            db.insertTextIntoDatabase(17, res);
         } catch (Exception e) {
             e.printStackTrace();
         }

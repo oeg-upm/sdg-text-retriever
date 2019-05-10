@@ -51,4 +51,19 @@ public class Database {
             e.printStackTrace();
         }
     }
+    
+    public void insertTextIntoDatabase (int ods, String text){
+        try{
+            openConnection();
+            String insertQuery = "INSERT INTO ods_text (ods,text) VALUES (?,?)";
+            PreparedStatement pst = null;
+            pst = conexion.prepareStatement(insertQuery);
+            pst.setInt(1, ods);
+            pst.setString(2, text);
+            pst.executeUpdate();
+            pst.close();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
 }

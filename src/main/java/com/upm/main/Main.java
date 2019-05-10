@@ -28,15 +28,31 @@ public class Main {
         */
         
         /*
-        String url = "https://www.un.org/sustainabledevelopment/es/climate-change-2/";
+        String url = "https://www.un.org/sustainabledevelopment/es/globalpartnerships/";
         ScraperWeb sw = new ScraperWeb();
-        String res = sw.scrapWebONU13(url);
+        String res = sw.scrapWebONU17(url);
         System.out.println(res);
         */
         
-        String path = "C:\\Users\\Djbosh\\Documents\\ODS\\Agua.pdf";
+        String path = "C:\\Users\\Djbosh\\Documents\\ODS\\ODSReport.pdf";
         PdfParser parser = new PdfParser();
-        String res = parser.getTextFromPDF(path);
-        System.out.println(res);
+        parser.getTextFromReport(path, 22, 25, 3);
+        parser.getTextFromReport(path, 26, 27, 4);
+        parser.getTextFromReport(path, 28, 31, 5);
+        parser.getTextFromReport(path, 32, 33, 6);
+        parser.getTextFromReport(path, 34, 35, 7);
+        parser.getTextFromReport(path, 36, 37, 8);
+        parser.getTextFromReport(path, 38, 39, 9);
+        parser.getTextFromReport(path, 40, 41, 10);
+        parser.getTextFromReport(path, 42, 43, 11);
+        parser.getTextFromReport(path, 44, 45, 12);
+        parser.getTextFromReport(path, 46, 47, 13);
+        parser.getTextFromReport(path, 48, 49, 14);
+        parser.getTextFromReport(path, 50, 51, 15);
+        parser.getTextFromReport(path, 52, 55, 16);
+        parser.getTextFromReport(path, 56, 59, 17);
+        
+        
+        
     }
 }
