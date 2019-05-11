@@ -34,6 +34,7 @@ public class Main {
         System.out.println(res);
         */
         
+        /*
         String path = "C:\\Users\\Djbosh\\Documents\\ODS\\ODSReport.pdf";
         PdfParser parser = new PdfParser();
         parser.getTextFromReport(path, 22, 25, 3);
@@ -51,8 +52,11 @@ public class Main {
         parser.getTextFromReport(path, 50, 51, 15);
         parser.getTextFromReport(path, 52, 55, 16);
         parser.getTextFromReport(path, 56, 59, 17);
+        */
         
-        
+        String path = "C:\\Users\\Djbosh\\Documents\\ODS\\ReportODS2018.pdf";
+        PdfParser parser = new PdfParser();
+        parser.getTextLineByLineFromReport(path);
         
     }
 }
