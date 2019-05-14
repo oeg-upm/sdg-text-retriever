@@ -54,9 +54,9 @@ public class Main {
         parser.getTextFromReport(path, 56, 59, 17);
         */
         
-        String path = "C:\\Users\\Djbosh\\Documents\\ODS\\ReportODS2018.pdf";
+        String path = "C:\\Users\\Djbosh\\Documents\\ODS\\ImplAgenda2030.pdf";
         PdfParser parser = new PdfParser();
-        parser.getTextLineByLineFromReport(path);
+        parser.getTextLineByLineFromAgenda(path);
         
     }
 }
