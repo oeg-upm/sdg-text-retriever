@@ -1,5 +1,5 @@
 # sdg-text-retriever
-A program to retrieve texts related to Sustainable Development Goals from webs and PDF'sA program to retrieve texts related to Sustainable Development Goals from webs and PDF's
+A program to retrieve texts related to Sustainable Development Goals from webs and PDF's
 
 You can use this code to extract multiple types of text related to SDG's. First of all, you can get Goteo projects' description. To achieve that, I've used Goteo's API. You can try it by calling getProjectsFromGoteo function in the main class with the page number as a parameter. Each page contains 50 projects, and the information I persist in the database is the project name, short description, complete description and the owner ID. I have used RestTemplate framework to develop the request logic. There's a problem you should have in mind when making request to Goteo's services: there's a restriction in the number of request we can make in a short period of time. After that, you will always get a 429 error (TOO MANY REQUESTS), and you'll have to wait. 
 
